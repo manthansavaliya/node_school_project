@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 
 const signUp = async (req, res) => {
     try {
-        // console.log("start")
         const userData = req.body;
         const { name, email, password, acceptPrivacyPolicy, role } = userData;
         const newPassword = await bcrypt.hash(password, 10);
